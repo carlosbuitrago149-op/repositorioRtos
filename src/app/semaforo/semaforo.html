@@ -1,0 +1,19 @@
+<h1>RETO 4</h1>
+
+<div class="botones">
+  <button (click)="seleccionar('rojo')">Rojo</button>
+  <button (click)="seleccionar('amarillo')">Amarillo</button>
+  <button (click)="seleccionar('verde')">Verde</button>
+</div>
+
+@if (color) {
+  <div class="circulo" [style.backgroundColor]="color === 'rojo' ? 'red' : color === 'amarillo' ? 'gold' : 'green'"></div>
+
+  @switch (color) {
+    @case ('rojo') { <p class="mensaje">Detenerse</p> }
+    @case ('amarillo') { <p class="mensaje">Precaución</p> }
+    @case ('verde') { <p class="mensaje">Avanzar</p> }
+  }
+} @else {
+  <p>Presiona un botón para ver el semáforo.</p>
+}

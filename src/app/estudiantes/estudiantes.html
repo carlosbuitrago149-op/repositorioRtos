@@ -1,0 +1,23 @@
+<h1>RETO 3</h1>
+
+<div class="formulario">
+  <input type="text" placeholder="Nombre" [(ngModel)]="nombre">
+  <input type="text" placeholder="Programa" [(ngModel)]="programa">
+  <input type="number" placeholder="Edad" [(ngModel)]="edad">
+
+  <button (click)="registrar()">Registrar</button>
+</div>
+
+@if (mensajeError) {
+  <p class="error">{{ mensajeError }}</p>
+}
+
+<h2>Estudiantes registrados ({{ estudiantes.length }})</h2>
+
+<ul>
+  @for (e of estudiantes; track $index) {
+    <li>{{ e.nombre }} - {{ e.programa }} - {{ e.edad }} años</li>
+  } @empty {
+    <li>Aún no hay estudiantes registrados.</li>
+  }
+</ul>

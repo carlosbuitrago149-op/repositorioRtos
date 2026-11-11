@@ -1,0 +1,13 @@
+<h1>RETO 2</h1>
+
+@for (producto of productos; track producto.nombre) {
+  <div class="producto">
+    <h3>{{ producto.nombre }}</h3>
+    <p>Categoría: {{ producto.categoria }}</p>
+    <p>Precio: {{ producto.precio }}</p>
+
+    @if (producto.precio > 10000000) {
+      <span class="costoso">Producto costoso</span>
+    }
+  </div>
+}

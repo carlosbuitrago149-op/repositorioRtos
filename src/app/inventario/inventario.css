@@ -1,0 +1,13 @@
+.producto {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.costoso {
+  color: white;
+  background: crimson;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
